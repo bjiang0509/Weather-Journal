@@ -27,7 +27,6 @@ let generateEntry = (e) => {
             temp: temp,
             feeling: feeling
         };
-        console.log(entry.feeling);
         postData('http://localhost:8000/addEntry',entry)
     })
     .then(() => {
