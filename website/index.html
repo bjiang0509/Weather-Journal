@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Weather Journal</title>
-<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
- <body>
-<div id = "app">
-  <div class ="holder headline">
-    Weather Journal App
-  </div>
-  <div class = "county">
-    <label for="country">Countries: </label>
-    <select id="country">
-      <option value = "us">US</option>
-      <option value = "uk">UK</option>
-    </select>
-  </div>
-  <div class ="holder zip">
-    <label for="zip">Enter Zipcode here</label>
-    <input type="text" id="zip" placeholder="enter zip code here">
-  </div>
-  <div class ="holder feel">
-    <label for="feelings">How are you feeling today?</label>
-    <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
-    <button id="generate" type = "submit"> Generate </button>
-  </div>
-  <div class ="holder entry">
-    <div class = "title">Most Recent Entry</div>
-   <div id = "entryHolder">
-    <div id = "date"></div>
-    <div id = "weather"></div>  
-   <div id = "temp"></div>
-   <div id = "content"></div>
-  </div>
-  </div>
-  </div>
-<script src="app.js" type="text/javascript"></script>
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather Journal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Oswald:wght@200;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
 
-</body>
+    <body>
+        <header>
+            <h1>My Weather Diary</h1>
+        </header>
+        <section class = "countries">
+            <div class = "container">
+                <label for = "country-select">Country: </label>
+                <select id = "country-select">
+                    <option value = "us">United States</option>
+                    <option value = "uk"> United Kingdom</option>
+                </select>
+                <label for = "zip">Zipcode:</label>
+                <input id = "zip" type = "text">
+            </div>
+        </section>
+        <section class = "diary">
+            <div class = "container">  
+                <label for = "diary-input">Diary:</label>
+                <textarea id = "diary-input"></textarea>
+            </div>
+        </section>
+        <section class = "generate">
+            <button id = "generate">Generate</button>
+        </section>
+        <section class = "recent-entry">
+            <section class = "entry-holder">
+                <h5>Most Recent Entries:</h5>
+                <div class = "entry" id = "date"></div>
+                <div class = "entry" id = "weather"></div>
+                <div class = "entry" id = "temp"></div>
+                <div class = "entry" id = "feeling"></div>
+            </section>
+        </section>
+        <script src="app.js" type="text/javascript"></script>
+    </body>
 </html>

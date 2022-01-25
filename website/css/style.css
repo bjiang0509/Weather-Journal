@@ -1,0 +1,73 @@
+@import "design.css";
+
+body {
+    display: grid;
+    grid-template-columns: 10em 1fr 10em;
+    grid-template-areas: 
+    "header header header"
+    ". country ."
+    ". diary ."
+    ". generate ."
+    ". entry .";
+    row-gap: 20px;
+    background-image: url("./image/raining.jpg");
+    font-family: 'Merriweather', serif;
+}
+
+header {
+    display: grid;
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100vw;
+}
+
+.countries {
+    display: grid;
+    grid-area: country
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.diary {
+    display: grid;
+    grid-area: diary;
+}
+
+.generate {
+    display: grid;
+    grid-area: generate;
+    justify-content: end;
+    align-items: center;
+}
+
+.recent-entry {
+    display: grid;
+    grid-area: entry;
+}
+
+.entry-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media only screen and (min-width: 900px){
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
