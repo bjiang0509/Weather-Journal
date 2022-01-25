@@ -28,7 +28,6 @@ app.post('/addEntry', function (req, res){
     projectData.weather = req.body.weather;
     projectData.feeling = req.body.feeling;
     projectData.temp = req.body.temp;
-    console.log(projectData);
 })
 
 const port = 8000; 
